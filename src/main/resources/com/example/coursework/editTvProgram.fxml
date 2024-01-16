@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="404.0" prefWidth="400.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.coursework.controllers.programs.EditProgramController">
+    <children>
+        <HBox prefHeight="61.0" prefWidth="394.0">
+            <children>
+                <Label fx:id="formTitleId" alignment="CENTER" prefHeight="35.0" prefWidth="400.0" styleClass="custom-label" text="Редагування телепередачі" textAlignment="CENTER">
+                    <HBox.margin>
+                        <Insets />
+                    </HBox.margin>
+                </Label>
+            </children>
+        </HBox>
+        <HBox prefHeight="23.0" prefWidth="400.0">
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Назва" textAlignment="CENTER" wrappingWidth="399.73675203323364">
+                    <HBox.margin>
+                        <Insets />
+                    </HBox.margin>
+                    <font>
+                        <Font size="23.0" />
+                    </font>
+                </Text>
+            </children>
+        </HBox>
+        <HBox layoutX="10.0" layoutY="72.0" prefHeight="51.0" prefWidth="394.0">
+            <children>
+                <TextField fx:id="programNameId" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="35.0" prefWidth="280.0" promptText="Введіть назву телепередачі">
+                    <HBox.margin>
+                        <Insets bottom="5.0" left="60.0" top="5.0" />
+                    </HBox.margin>
+                </TextField>
+            </children>
+        </HBox>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Рейтинг" textAlignment="CENTER" wrappingWidth="394.9367561340332">
+            <font>
+                <Font size="23.0" />
+            </font>
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+        </Text>
+        <TextField fx:id="programRatingId" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="280.0" promptText="Введіть рейтинг">
+            <VBox.margin>
+                <Insets left="60.0" top="5.0" />
+            </VBox.margin></TextField>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Вартість, грн/с" textAlignment="CENTER" wrappingWidth="394.9367561340332">
+            <font>
+                <Font size="23.0" />
+            </font>
+        </Text>
+        <TextField fx:id="programRateId" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="280.0" promptText="Введіть вартість">
+            <VBox.margin>
+                <Insets left="60.0" top="5.0" />
+            </VBox.margin>
+        </TextField>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Обмеження, реклами/день" textAlignment="CENTER" wrappingWidth="394.9367561340332">
+            <font>
+                <Font size="23.0" />
+            </font>
+            <VBox.margin>
+                <Insets top="5.0" />
+            </VBox.margin>
+        </Text>
+        <TextField fx:id="programLimitId" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="200.0" promptText="Введіть обмеження">
+            <VBox.margin>
+                <Insets left="100.0" />
+            </VBox.margin></TextField>
+        <Label fx:id="successLabel" alignment="CENTER" prefHeight="18.0" prefWidth="502.0" text="Телепередачу відредаговано успішно" textFill="#0ba13d" visible="false">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <Button mnemonicParsing="false" onAction="#save" prefHeight="46.0" prefWidth="130.0" styleClass="stylish-button" text="Редагувати">
+            <VBox.margin>
+                <Insets bottom="50.0" left="135.0" top="5.0" />
+            </VBox.margin>
+        </Button>
+    </children>
+
+
+
+</VBox>

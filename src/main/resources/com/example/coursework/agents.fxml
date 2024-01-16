@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="900.0" style="-fx-background-color: #915BEF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.coursework.controllers.agents.AgentsController">
+    <children>
+        <AnchorPane layoutY="90.0" prefHeight="530.0" prefWidth="900.0" style="-fx-background-color: #DBDCDD;">
+            <children>
+                <Button fx:id="personalCabBtn" layoutY="1.0" mnemonicParsing="false" onMouseClicked="#switchToPersonalCabinet" prefHeight="38.0" prefWidth="130.0" styleClass="transparent-border-button" stylesheets="@styles.css" text="Особистий кабінет" />
+                <Button fx:id="programsBtn" layoutX="130.0" layoutY="1.0" mnemonicParsing="false" onMouseClicked="#switchToPrograms" prefHeight="38.0" prefWidth="130.0" styleClass="transparent-border-button" stylesheets="@styles.css" text="Телепередачі" />
+                <Button fx:id="agentsBtn" layoutX="260.0" layoutY="1.0" mnemonicParsing="false" onMouseClicked="#switchToAgents" prefHeight="38.0" prefWidth="130.0" stylesheets="@styles.css" text="Агенти">
+               <styleClass>
+                  <String fx:value="transparent-border-button" />
+                  <String fx:value="transparent-border-active-button" />
+               </styleClass></Button>
+                <Button fx:id="contractsBtn" layoutX="638.0" layoutY="1.0" mnemonicParsing="false" onMouseClicked="#switchToContracts" prefHeight="38.0" prefWidth="130.0" styleClass="transparent-border-button" stylesheets="@styles.css" text="Контракти" />
+                <Button fx:id="ordersBtn" layoutX="769.0" layoutY="1.0" mnemonicParsing="false" onMouseClicked="#switchToOrders" prefHeight="38.0" prefWidth="130.0" styleClass="transparent-border-button" stylesheets="@styles.css" text="Замовлення" />
+                <Button fx:id="customerOrdersBtn" layoutX="390.0" layoutY="1.0" mnemonicParsing="false" onMouseClicked="#switchToCustomerOrders" prefHeight="38.0" prefWidth="130.0" styleClass="transparent-border-button" stylesheets="@styles.css" text="Ваші замовлення" />
+                <TableView fx:id="agentsTable" layoutX="122.0" layoutY="157.0" prefHeight="300.0" prefWidth="650.0" stylesheets="@styles.css">
+                    <columns>
+                        <TableColumn fx:id="agentIdCol" prefWidth="103.19998168945312" styleClass="table-column-id" text="Ідентифікатор" />
+                        <TableColumn fx:id="agentNameCol" prefWidth="137.6000518798828" styleClass="table-column-id" text="Ім'я" />
+                        <TableColumn fx:id="agentSurnameCol" prefWidth="138.4000244140625" styleClass="table-column-id" text="Прізвище" />
+                        <TableColumn fx:id="agentCommissionRateCol" prefWidth="143.199951171875" styleClass="table-column-id" text="Комісійна ставка, %" />
+                  <TableColumn fx:id="agentRevenueCol" prefWidth="120.0" styleClass="table-column-id" text="Дохід, грн" />
+                    </columns>
+                    <styleClass>
+                        <String fx:value="table-cell" />
+                        <String fx:value="table-row-cell1" />
+                    </styleClass>
+                </TableView>
+              <ImageView fx:id="addDataImage" fitHeight="62.0" fitWidth="69.0" layoutX="122.0" layoutY="95.0" onMouseClicked="#getAddView" onMouseEntered="#showAddTip" pickOnBounds="true" preserveRatio="true" visible="false">
+                  <Image url="D:\Java projects 2\CourseWork\src\main\java\com\example\coursework\Images\addData.png" />
+              </ImageView>
+              <ImageView fx:id="refreshTableImage" fitHeight="62.0" fitWidth="69.0" layoutX="184.0" layoutY="95.0" onMouseClicked="#refreshTable" onMouseEntered="#showRefreshTip" pickOnBounds="true" preserveRatio="true" visible="false">
+                  <Image url="D:\Java projects 2\CourseWork\src\main\java\com\example\coursework\Images\refreshTable.png" />
+              </ImageView>
+              <ImageView fx:id="deleteDataImage" fitHeight="62.0" fitWidth="69.0" layoutX="315.0" layoutY="92.0" onMouseClicked="#deleteData" onMouseEntered="#showDeleteTip" pickOnBounds="true" preserveRatio="true" visible="false">
+                  <Image url="D:\Java projects 2\CourseWork\src\main\java\com\example\coursework\Images\delete.png" />
+              </ImageView>
+              <ImageView fx:id="editDataImage" fitHeight="71.0" fitWidth="69.0" layoutX="246.0" layoutY="92.0" onMouseClicked="#editData" onMouseEntered="#showEditTip" pickOnBounds="true" preserveRatio="true" visible="false">
+                  <Image url="D:\Java projects 2\CourseWork\src\main\java\com\example\coursework\Images\edit.png" />
+              </ImageView>
+            </children>
+        </AnchorPane>
+        <Label layoutX="279.0" layoutY="14.0" text="Телекомпанія">
+            <font>
+                <Font name="System Bold Italic" size="50.0" />
+            </font>
+            <textFill>
+                <LinearGradient endX="0.5719697258689186" endY="1.0" startX="0.5492424242424243">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color red="0.04912280663847923" green="0.2947368323802948" blue="0.10643275082111359" />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="0.5157894492149353" green="0.07068226486444473" blue="0.07068226486444473" />
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </textFill>
+        </Label>
+    </children>
+</AnchorPane>

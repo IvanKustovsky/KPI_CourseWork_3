@@ -1,0 +1,68 @@
+.transparent-border-button {
+    -fx-background-color: transparent;
+}
+
+.transparent-border-active-button {
+    -fx-border-width: 0 0 2 0; /* Тут 2 - товщина нижньої границі */
+    -fx-border-color: transparent transparent green transparent; /* Це встановлює колір нижньої границі */
+}
+
+.transparent-border-button:hover {
+    -fx-background-color: #f0f0f0; /* Колір фону при наведенні на кнопку (змініть за потребою) */
+}
+
+.green-button {
+    -fx-background-color: green; /* Зелений фон */
+    -fx-text-fill: #ffffff; /* Білий текст */
+}
+
+.table-view {
+    -fx-background-color:#651FFF;
+    -fx-background-radius:14 14 0 0;
+}
+.table-view .column-header-background{
+    -fx-background-color: #651FFF;
+    -fx-background-radius:14;
+    -fx-background-insets: 0 0 10 0;
+}
+.table-view .column-header, .table-view .filler{
+    -fx-size:50px;
+    -fx-border-width: 0 0 10 0;
+    -fx-background-color:transparent;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white ;
+}
+
+.table-row-cell:empty {
+    -fx-background-color: white;
+}
+
+.custom-label {
+    -fx-font-size: 24px; /* Розмір шрифту */
+    -fx-text-fill: #3498db; /* Колір тексту */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 3, 0, 0, 0);
+}
+
+.stylish-button {
+    -fx-background-color: #7529E6; /* Button background color */
+    -fx-text-fill: white; /* Button text color */
+    -fx-font-size: 16px; /* Font size */
+    -fx-padding: 10px 20px; /* Padding (top/bottom, left/right) */
+    -fx-background-radius: 5px; /* Rounded corners */
+}
+
+.table-row-cell {
+    -fx-cell-size: 45px;
+}
+
+.table-cell {
+    -fx-alignment: top-left;
+    -fx-text-overrun: clip; /* Замість ellipsis використовуйте clip */
+    -fx-wrap-text: true;
+}
+
+.table-column-id {
+    -fx-alignment: center;
+}

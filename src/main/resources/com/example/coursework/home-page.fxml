@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="900.0" style="-fx-background-color: #915BEF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.coursework.controllers.HomePageController">
+    <children>
+        <AnchorPane layoutY="90.0" prefHeight="530.0" prefWidth="900.0" style="-fx-background-color: #DBDCDD;">
+            <children>
+                <TextField fx:id="loginField" layoutX="275.0" layoutY="181.0" prefHeight="42.0" prefWidth="350.0" promptText="Логін" style="-fx-background-radius: 5;">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </TextField>
+                <Button fx:id="signInButton" layoutX="376.0" layoutY="357.0" mnemonicParsing="false" onMouseClicked="#openPersonalCabinetWindow" prefHeight="43.0" prefWidth="150.0" style="-fx-background-color: #EBA41A;" text="Увійти" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                    </font>
+                </Button>
+                <Label alignment="CENTER" layoutY="73.0" prefHeight="54.0" prefWidth="900.0" text="Вітаємо в меню автентифікації">
+                    <font>
+                        <Font name="System Bold" size="36.0" />
+                    </font>
+                    <textFill>
+                        <LinearGradient endX="0.5719697258689186" endY="1.0" startX="0.5492424242424243">
+                            <stops>
+                                <Stop>
+                                    <color>
+                                        <Color red="0.04912280663847923" green="0.2947368323802948" blue="0.10643275082111359" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="1.0">
+                                    <color>
+                                        <Color red="0.5157894492149353" green="0.07068226486444473" blue="0.07068226486444473" />
+                                    </color>
+                                </Stop>
+                            </stops>
+                        </LinearGradient>
+                    </textFill>
+                </Label>
+            <Label layoutX="275.0" layoutY="251.0" prefHeight="27.0" prefWidth="258.0" text="Пароль">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="275.0" layoutY="154.0" prefHeight="27.0" prefWidth="342.0" text="Email або ЄДРПОУ">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="errorLabel" alignment="CENTER" layoutX="250.0" layoutY="320.0" prefHeight="27.0" prefWidth="400.0" text="Ви неправильно ввели логін або пароль" textFill="RED" visible="false">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="passwordField" layoutX="275.0" layoutY="278.0" prefHeight="42.0" prefWidth="350.0" promptText="Пароль" style="-fx-background-radius: 5;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </PasswordField>
+            </children>
+        </AnchorPane>
+        <Label layoutX="279.0" layoutY="13.0" text="Телекомпанія">
+            <font>
+                <Font name="System Bold Italic" size="50.0" />
+            </font>
+            <textFill>
+                <LinearGradient endX="0.5719697258689186" endY="1.0" startX="0.5492424242424243">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color red="0.04912280663847923" green="0.2947368323802948" blue="0.10643275082111359" />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="0.5157894492149353" green="0.07068226486444473" blue="0.07068226486444473" />
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </textFill>
+        </Label>
+        <Button fx:id="signUpButton" layoutX="742.0" mnemonicParsing="false" onMouseClicked="#openRegistrationWindow" prefHeight="50.0" prefWidth="157.0" style="-fx-background-color: #EBA41A;" text="Реєстрація" textFill="WHITE">
+            <font>
+                <Font name="System Bold Italic" size="20.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>

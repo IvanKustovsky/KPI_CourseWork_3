@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="900.0" style="-fx-background-color: #915BEF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.coursework.controllers.orders.OrderAdvertisement">
+    <children>
+        <AnchorPane layoutY="90.0" prefHeight="530.0" prefWidth="900.0" style="-fx-background-color: #DBDCDD;">
+            <children>
+                <Button fx:id="orderAdvertisementBtn" layoutX="300.0" layoutY="465.0" mnemonicParsing="false" onAction="#orderNewAdvertisement" prefHeight="43.0" prefWidth="300.0" styleClass="green-button" stylesheets="@styles.css" text="Оформити замовлення" textFill="#6e5e5e">
+                    <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                    </font>
+                </Button>
+                <Label alignment="CENTER" layoutX="325.0" layoutY="383.0" prefHeight="27.0" prefWidth="250.0" text="Агент та його відсоток, %">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER" layoutX="325.0" layoutY="74.0" prefHeight="27.0" prefWidth="250.0" text="Назва телепередачі">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER" layoutX="325.0" layoutY="228.0" prefHeight="27.0" prefWidth="250.0" text="Тривалість реклами, с ">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Label fx:id="agentError" alignment="CENTER" layoutX="110.0" layoutY="436.0" prefHeight="26.0" prefWidth="680.0" text="Оберіть агента." textFill="RED" visible="false">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                </Label>
+                <Label alignment="CENTER" layoutX="325.0" layoutY="153.0" prefHeight="27.0" prefWidth="250.0" text="Дата показу реклами">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="contractAmountId" editable="false" layoutX="325.0" layoutY="333.0" prefHeight="40.0" prefWidth="250.0" promptText="Вартість реклами" style="-fx-background-radius: 5;">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </TextField>
+                <Label alignment="CENTER" layoutX="325.0" layoutY="308.0" prefHeight="27.0" prefWidth="250.0" text="Сума контракту, грн">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+            <ChoiceBox fx:id="programsCB" layoutX="325.0" layoutY="101.0" prefHeight="26.0" prefWidth="250.0" />
+            <DatePicker fx:id="dataPickerId" layoutX="325.0" layoutY="180.0" prefHeight="26.0" prefWidth="250.0" promptText="Оберіть дату" />
+            <ChoiceBox fx:id="agentAndRateCB" layoutX="325.0" layoutY="410.0" prefHeight="26.0" prefWidth="250.0" />
+            <ChoiceBox fx:id="adDurationCB" layoutX="325.0" layoutY="256.0" prefHeight="26.0" prefWidth="250.0" />
+            <Label alignment="CENTER" layoutY="14.0" prefHeight="54.0" prefWidth="900.0" text="Вітаємо в меню замовлення">
+               <font>
+                  <Font name="System Bold Italic" size="36.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="0.5719697258689186" endY="1.0" startX="0.5492424242424243">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.04912280663847923" green="0.2947368323802948" blue="0.10643275082111359" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.5157894492149353" green="0.07068226486444473" blue="0.07068226486444473" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Label fx:id="programNameError" alignment="CENTER" layoutX="110.0" layoutY="127.0" prefHeight="26.0" prefWidth="680.0" text="Оберіть назву телепередачі." textFill="RED" visible="false">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="dateError" alignment="CENTER" layoutX="110.0" layoutY="206.0" prefHeight="26.0" prefWidth="680.0" text="Визначте дату майбутнього показу реклами." textFill="RED" visible="false">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="durationError" alignment="CENTER" layoutX="110.0" layoutY="282.0" prefHeight="26.0" prefWidth="680.0" text="Встановіть тривалість вашої реклами. " textFill="RED" visible="false">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            </children>
+        </AnchorPane>
+        <Label layoutX="278.0" layoutY="14.0" text="Телекомпанія">
+            <font>
+                <Font name="System Bold Italic" size="50.0" />
+            </font>
+            <textFill>
+                <LinearGradient endX="0.5719697258689186" endY="1.0" startX="0.5492424242424243">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color red="0.04912280663847923" green="0.2947368323802948" blue="0.10643275082111359" />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="0.5157894492149353" green="0.07068226486444473" blue="0.07068226486444473" />
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </textFill>
+        </Label>
+    </children>
+</AnchorPane>

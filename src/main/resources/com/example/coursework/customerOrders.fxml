@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="900.0" style="-fx-background-color: #915BEF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.coursework.controllers.orders.CustomerOrdersController">
+    <children>
+        <AnchorPane layoutY="90.0" prefHeight="530.0" prefWidth="900.0" style="-fx-background-color: #DBDCDD;">
+            <children>
+                <Button fx:id="personalCabBtn" layoutY="1.0" mnemonicParsing="false" onMouseClicked="#switchToPersonalCabinet" prefHeight="38.0" prefWidth="130.0" styleClass="transparent-border-button" stylesheets="@styles.css" text="Особистий кабінет" />
+                <Button fx:id="programsBtn" layoutX="130.0" layoutY="1.0" mnemonicParsing="false" onMouseClicked="#switchToPrograms" prefHeight="38.0" prefWidth="130.0" styleClass="transparent-border-button" stylesheets="@styles.css" text="Телепередачі" />
+                <Button fx:id="agentsBtn" layoutX="260.0" layoutY="1.0" mnemonicParsing="false" onMouseClicked="#switchToAgents" prefHeight="38.0" prefWidth="130.0" styleClass="transparent-border-button" stylesheets="@styles.css" text="Агенти" />
+                <Button fx:id="contractsBtn" layoutX="662.0" layoutY="1.0" mnemonicParsing="false" onMouseClicked="#switchToContracts" prefHeight="38.0" prefWidth="130.0" styleClass="transparent-border-button" stylesheets="@styles.css" text="Контракти" />
+                <Button fx:id="ordersBtn" layoutX="769.0" layoutY="1.0" mnemonicParsing="false" onMouseClicked="#switchToOrders" prefHeight="38.0" prefWidth="130.0" styleClass="transparent-border-button" stylesheets="@styles.css" text="Замовлення" />
+                <Button fx:id="customerOrdersBtn" layoutX="390.0" layoutY="1.0" mnemonicParsing="false" onMouseClicked="#switchToCustomerOrders" prefHeight="38.0" prefWidth="130.0" stylesheets="@styles.css" text="Ваші замовлення">
+               <styleClass>
+                  <String fx:value="transparent-border-button" />
+                  <String fx:value="transparent-border-active-button" />
+               </styleClass></Button>
+              <TableView fx:id="customerOrdersTable" layoutX="27.0" layoutY="154.0" prefHeight="300.0" prefWidth="858.0" stylesheets="@styles.css">
+                  <columns>
+                      <TableColumn fx:id="numberCol" prefWidth="60.0" styleClass="table-column-id" text="ID" />
+                      <TableColumn fx:id="programNameCol" prefWidth="121.5999755859375" styleClass="table-column-id" text="Програма" />
+                      <TableColumn fx:id="programRatingCol" prefWidth="95.20002746582031" styleClass="table-column-id" text="Рейтинг" />
+                      <TableColumn fx:id="programRateCol" prefWidth="108.79998779296875" styleClass="table-column-id" text="Вартість, грн/с" />
+                  <TableColumn fx:id="dateCol" styleClass="table-column-id" text="Дата" />
+                      <TableColumn fx:id="durationCol" prefWidth="100.0" styleClass="table-column-id" text="Тривалість" />
+                  <TableColumn fx:id="contractAmountCol" prefWidth="105.5999755859375" styleClass="table-column-id" text="Сума, грн" />
+                  <TableColumn fx:id="agentDataCol" prefWidth="180.79998779296875" styleClass="table-column-id" text="Дані про агента" />
+                  </columns>
+                  <styleClass>
+                      <String fx:value="table-cell" />
+                      <String fx:value="table-row-cell1" />
+                  </styleClass>
+              </TableView>
+            </children>
+        </AnchorPane>
+        <Label layoutX="278.0" layoutY="7.0" text="Телекомпанія">
+            <font>
+                <Font name="System Bold Italic" size="50.0" />
+            </font>
+            <textFill>
+                <LinearGradient endX="0.5719697258689186" endY="1.0" startX="0.5492424242424243">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color red="0.04912280663847923" green="0.2947368323802948" blue="0.10643275082111359" />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="0.5157894492149353" green="0.07068226486444473" blue="0.07068226486444473" />
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </textFill>
+        </Label>
+    </children>
+</AnchorPane>
